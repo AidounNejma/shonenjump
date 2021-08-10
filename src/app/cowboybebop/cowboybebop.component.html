@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>COWBOY BEBOP</h1>
+</div>
+<!-- Fin Titre  -->
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/cowboyBebop.jpeg" alt="cowboybebop" style="width:1200px">
+</div>
+<!-- Fin image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+    En 2071, les voyages dans l'espace sont devenus monnaie courante. Spike Spiegel et Jet Black à bord de leur vaisseau spatial le Bebop, sont deux redoutables chasseurs de prime. Il parcourent le système solaire à le recherche de criminels dont la tête est mise à prix par les autorités. Vivant au jour le jour sans attache, leur chemin les mènera parfois vers des lieux et personnes de leur passé.
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(COWBOYBEBOP)" class="team col-md-3" *ngFor="let COWBOYBEBOP of COWBOYBEBOP">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href="" class="profile">
+            <h2 class="profile__name">Episode {{COWBOYBEBOP.episode}}</h2>
+            <p>{{COWBOYBEBOP.title}}</p>
+            <img alt="Thumbnail Episode 1 Cowboy Boy" [src]="COWBOYBEBOP.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- fin vignettes épisodes -->
+
+<app-footer></app-footer>

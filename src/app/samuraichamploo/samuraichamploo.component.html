@@ -1,0 +1,42 @@
+<app-header></app-header>
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>SAMURAI CHAMPLOO</h1>
+</div>
+<!--  Fin Titre  -->
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/samuraiChamploo.png" alt="Samurai Champloo" style="width:1200px">
+</div>
+<!-- Fin image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">L'histoire se déroule dans une version fictive de l'ère Edo au Japon. Une jeune fille nomée Fuu,recherche un samouraï qui sent le tournesol et se fait accompagner par deux individus, Mugen, extravagant, ancien pirate devenu vagabond, et Jin un samouraï (rōnin) impassible, à la suite d'un pari qu'elle a « gagné » contre ces deux derniers.</p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(SAMURAICHAMPLOO)" *ngFor="let SAMURAICHAMPLOO of SAMURAICHAMPLOO" class="team col-md-3" >
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href="" class="profile">
+            <h2 class="profile__name">Episode {{SAMURAICHAMPLOO.episode}}</h2>
+            <p>{{SAMURAICHAMPLOO.title}}</p>
+            <img alt="Thumbnail Episode 1 Samurai Champloo" [src]="SAMURAICHAMPLOO.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- Fin vignettes épisodes -->
+
+
+
+
+<app-footer></app-footer>

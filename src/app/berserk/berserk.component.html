@@ -1,0 +1,48 @@
+<app-header></app-header>
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>BERSERK</h1>
+</div>
+<!-- Fin Titre  -->
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/berserk.jpeg" alt="berserk" style="width:1200px">
+</div>
+<!-- Fin image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">Dans un univers médiéval impitoyable survit un jeune guerrier orphelin nommé Guts. N'ayant appris
+    de son tuteur que
+    la seule loi des armes, il cherche dans son épée sa raison de vivre, jusqu'à sa rencontre avec la bande du faucon,
+    une jeune armée de mercenaires issue de milieu paysan, invaincue sur un champ de bataille. Perdant un combat contre
+    leur chef, le jeune et charismatique Griffith, Guts se voit dans l'obligation de les rejoindre. Très vite, une
+    étrange amitié naît entre les deux jeunes hommes, et Guts, suite à des victoires écrasantes, devient commandant des
+    troupes d'assaut de la bande des faucons. Mais que cherche vraiment l'énigmatique Griffith, qu'est-il prêt à
+    sacrifier pour réaliser son rêve ? Guts va-t-il trouver une autre raison de vivre que le maniement de son
+    impressionnante épée ? Et jusqu'où ces deux hommes vont-ils emmener la bande du faucon ?
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(BERSERK)" class="team col-md-3" *ngFor="let BERSERK of BERSERK">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href=""class="profile">
+            <h2 class="profile__name">Episode {{BERSERK.episode}}</h2>
+            <p>{{BERSERK.title}}</p>
+            <img alt="Thumbnail Episode 1 Berserk" [src]="BERSERK.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- fin vignettes épisodes -->
+
+<app-footer></app-footer>

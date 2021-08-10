@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>VINLAND SAGA</h1>
+</div>
+<!-- Fin Titre  -->
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/vinland.jpeg" alt="Vinland Saga" style="width:1200px">
+</div>
+<!-- Fin image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(VINLAND)" class="team col-md-3" *ngFor="let VINLAND of VINLAND">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href=""class="profile">
+            <h2 class="profile__name">Episode {{VINLAND.episode}}</h2>
+            <p>{{VINLAND.title}}</p>
+            <img alt="Thumbnail Episode 1 Vinland Saga" [src]="VINLAND.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- fin vignettes épisodes -->
+
+<app-footer></app-footer>

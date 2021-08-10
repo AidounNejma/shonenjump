@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>GOLDEN BOY</h1>
+</div>
+<!-- Fin titre -->
+
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/goldenBoy.jpeg" alt="Golden Boy" style="width:1200px">
+</div>
+<!--  Fin de l'imag de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+    Golden Boy nous raconte l'histoire de Kintaro Oe, un jeune homme de 25 ans qui a quitté sa fac de droit pour parcourir le Japon et vivre de nouvelles expériences.
+    Kintaro, qui voyage avec un vélo, va faire des rencontres surprenantes et montrer aux gens que derrière ses allures de pervers dégénéré se cache un garçon au grand coeur doté d'une intelligence hors du commun.
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- Vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(GOLDENBOY)" class="team col-md-3" *ngFor="let GOLDENBOY of GOLDENBOY">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href="" class="profile">
+            <h2 class="profile__name">Episode {{GOLDENBOY.episode}}</h2>
+            <p>{{GOLDENBOY.title}}</p>
+            <img alt="Thumbnail Episode 1 Golden Boy" [src]="GOLDENBOY.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- Fin Vignettes épisodes -->
+
+<app-footer></app-footer>

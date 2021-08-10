@@ -1,0 +1,42 @@
+<app-header></app-header>
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>GREAT TEACHER ONIZUKA</h1>
+</div>
+<!-- Fin Titre  -->
+
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/gto.jpeg" alt="Great Teacher Onizuka" style="width:1200px">
+</div>
+<!-- Fin de l'image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+    Un jeune enseignant de lycée, ancien voyou, se retrouve responsable d'une classe particulièrement difficile dont les élèves ne respectent plus aucun professeur. Parce qu'il parvient à les comprendre et à se mettre à leur niveau, il arrivera non seulement à leur tenir tête, mais aussi à les aider...
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- Vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(GTO)" class="team col-md-3" *ngFor="let GTO of GTO">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href="" class="profile">
+            <h2 class="profile__name">Episode {{GTO.episode}}</h2>
+            <p>{{GTO.title}}</p>
+            <img alt="Thumbnail Episode 1 Death Note" [src]="GTO.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- Fin Vignettes épisodes -->
+
+<app-footer></app-footer>

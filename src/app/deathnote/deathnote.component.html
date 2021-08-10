@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>DEATH NOTE</h1>
+</div>
+<!-- Fin Titre  -->
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/deathNote.jpeg" alt="Death Note" style="width:1200px">
+</div>
+<!-- Fin de l'image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+    Light Yagami est un lycéen surdoué qui juge le monde actuel criminel, pourri et corrompu. Sa vie change du tout au tout le jour où il ramasse par hasard un mystérieux cahier intitulé « Death Note ». Son mode d'emploi indique que «la personne dont le nom est écrit dans ce cahier meurt ».
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- Vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(DEATHNOTE)" class="team col-md-3" *ngFor="let DEATHNOTE of DEATHNOTE">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href="" class="profile">
+            <h2 class="profile__name">Episode {{DEATHNOTE.episode}}</h2>
+            <p>{{DEATHNOTE.title}}</p>
+            <img alt="Thumbnail Episode 1 Death Note" [src]="DEATHNOTE.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- Fin Vignettes épisodes -->
+
+<app-footer></app-footer>

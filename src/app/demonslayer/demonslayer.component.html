@@ -1,0 +1,43 @@
+<app-header></app-header>
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>DEMON SLAYER</h1>
+</div>
+<!-- Fin Titre  -->
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/demonslayer.jpeg" alt="Demon Slayer" style="width:1200px">
+</div>
+<!-- Fin image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+    Depuis les temps anciens, il existe des rumeurs concernant des démons mangeurs d'hommes qui se cachent dans les bois. Pour cette raison, les citadins locaux ne s'y aventurent jamais la nuit. La légende raconte aussi qu'un tueur déambule la nuit, chassant ces démons assoiffés de sang.
+    Depuis la mort de son père, Tanjirou a pris sur lui pour subvenir aux besoins de sa famille. Malgré cette tragédie, ils réussissent à trouver un peu de bonheur au quotidien. Cependant, ce peu de bonheur se retrouve détruit le jour où Tanjirou découvre que sa famille s'est fait massacrer et que la seule survivante, sa sœur Nezuko, est devenue un démon. À sa grande surprise, Nezuko montre encore des signes d'émotion et de pensées humaines. Ainsi, commence la dure tâche de Tanjirou, celle de combattre les démons et de faire redevenir sa sœur humaine.
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+<!-- vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(DEMONSLAYER)" class="team col-md-3" *ngFor="let DEMONSLAYER of DEMONSLAYER">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href=""class="profile">
+            <h2 class="profile__name">Episode {{DEMONSLAYER.episode}}</h2>
+            <p>{{DEMONSLAYER.title}}</p>
+            <img alt="Thumbnail Episode 1 Demon Slayer" [src]="DEMONSLAYER.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- fin vignettes épisodes -->
+
+<app-footer></app-footer>
+

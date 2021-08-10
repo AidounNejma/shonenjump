@@ -1,0 +1,206 @@
+<app-header></app-header>
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>JOJO'S BIZARRE ADVENTURE</h1>
+</div>
+<!-- Fin titre -->
+
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/jojo.jpeg" alt="Jojo" style="width:1200px">
+</div>
+<!-- Fin de l'image de l'animé -->
+
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+    JoJo's Bizarre Adventure suit les aventures de la famille Joestar sur plusieurs générations, chaque génération ayant
+    son « JoJo ».
+  </p>
+</div>
+<!-- Fin résumé-->
+
+<!-- accordéon bootstrap + épisodes -->
+<div class="d-flex justify-content-center">
+  <div class="col-lg-9">
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+
+      <div class="accordion-item bg-dark">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            SAISON 1 : PHANTOM BLOOD / BATTLE TENDENCY
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+            <div class="d-flex justify-content-center">
+              <p>En Angleterre, dans les années 1880, Jonathan, fils unique de la famille aristocrate Joestar, s’efforce
+                de devenir un gentleman accompli. Son quotidien est bouleversé par l’adoption de Dio Brando, un jeune
+                homme mystérieux du même âge. Cette adoption résulte d’une vieille promesse liant leurs pères respectifs
+                : Dario a sauvé la vie de George Joestar dans le passé et lui demande, sur son lit de mort, de
+                recueillir son fils. Mais Dio est fourbe, ambitieux et sans scrupule : il fera tout pour s’emparer de la
+                fortune des Joestar et détruire la vie de Jonathan. Leur lutte fratricide va les mener dans les recoins
+                les plus sombres de la magie noire et se perpétuer de génération en génération comme une malédiction.
+              </p>
+            </div>
+
+            <!-- Vignettes episodes -->
+            <article class="flow">
+              <div class="row">
+                <div (click)="open(JOJO)" *ngFor="let JOJO of JOJO" class="team col-md-3">
+                  <ul class="auto-grid" role="list" *ngIf="JOJO.season == 1 ">
+                    <li>
+                      <div href="" class="profile">
+                        <h2 class="profile__name">Episode {{JOJO.episode}}</h2>
+                        <p>{{JOJO.title}}</p>
+                        <img alt="Thumbnail Episode 1 JOJO" [src]="JOJO.picture" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <!-- Fin Vignettes episodes -->
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="accordion-item bg-dark">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            SAISON 2 : STARDUST CRUSADERS
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+            <div class="d-flex justify-content-center">
+              <p>Nouvelle époque. Nouveau continent. 1983. Océan Pacifique. Au large des îles Canaries, un navire
+                remonte du fin fond de l’océan un énorme coffre finement sculpté et décoré de bijoux. Les marins sont
+                convaincus : ils sont enfin tombés sur un grand trésor ! Mais bizarre, la caisse semble fermée de
+                l’intérieur alors ils décident de la forcer. Quelque temps plus tard, le navire est retrouvé à la
+                dérive, l’équipage s’est volatilisé et le coffre est vide... 1987. Japon. Jotaro Kujo, jeune homme de 17
+                ans surnommé Jojo, est incarcéré pour coups et blessures. Sa mère vient le libérer, mais celui-ci refuse
+                de sortir de sa cellule car il prétend être possédé par un esprit démoniaque. C’est son grand-père
+                Joseph et son ami Mohammed Abdul, tous deux revenus d’un périple en Égypte, qui réussiront à le
+                convaincre de sortir en lui révélant qu’il possède un pouvoir psychique, le « Stand », ranimé suite au
+                retour de l’ennemi juré de la famille : Dio ! S’agit-il du même Dio que leur ancêtre a combattu au
+                siècle précédent ?</p>
+            </div>
+
+            <article class="flow">
+              <div class="row">
+                <div (click)="open(JOJO)" *ngFor="let JOJO of JOJO" class="team col-md-3">
+                  <ul class="auto-grid" role="list" *ngIf="JOJO.season == 2 ">
+                    <li>
+                      <div href="" class="profile">
+                        <h2 class="profile__name">Episode {{JOJO.episode}}</h2>
+                        <p>{{JOJO.title}}</p>
+                        <img alt="Thumbnail Episode 1 JOJO" [src]="JOJO.picture" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header bg-dark" id="flush-headingThree">
+          <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            SAISON 3 : DIAMOND IS UNBREAKABLE
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body bg-dark">
+            <div class="d-flex justify-content-center">
+              <p>Dans la ville de Morio, Josuke Higashikata, jeune lycéen, doit faire face à une importante menace. Des
+                meurtres en série, quelque chose d'étrange est à l'oeuvre, quelque chose de bizarre... Mais la police
+                est désemparée... Josuke Higashikata avec son caractère bien trempé et son puissant stand
+                (représentation de sa force psychique et de son esprit combatif) va tenter de percer le mystère avec son
+                camarade Koichi Hirose. A eux deux, pourront-ils sauver la ville de Morio ?</p>
+            </div>
+
+            <article class="flow">
+              <div class="row">
+                <div (click)="open(JOJO)" *ngFor="let JOJO of JOJO" class="team col-md-3">
+                  <ul class="auto-grid" role="list" *ngIf="JOJO.season == 3 ">
+                    <li>
+                      <div href="" class="profile">
+                        <h2 class="profile__name">Episode {{JOJO.episode}}</h2>
+                        <p>{{JOJO.title}}</p>
+                        <img alt="Thumbnail Episode 1 JOJO" [src]="JOJO.picture" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header bg-dark" id="flush-headingFour">
+          <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            SAISON 4 : GOLDEN WIND
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body bg-dark">
+            <div class="d-flex justify-content-center">
+              <p> Néapolis. Les rues n'y sont pas sûres. D'inquiétants individus ont pris le contrôle de la ville.
+                Koichi Hirose va vite le découvrir. Envoyé en mission par Jotaro, il doit retrouver un certain Haruno
+                Shiobana et enquêter sur lui. Mais pourquoi ? Ce jeune homme de 15 ans n'est pas ce qu'il semble être.
+                Koichi va vite découvrir qu'il se fait appeler Giorno Giovanna et que c'est un manieur de stand lui
+                aussi. Mais ça ne s'arrête pas là ! Il serait le fils de Dio Brando ?! JOJO's Bizarre Adventure : Golden
+                Wind nous entraîne dans les aventures de Giorno. Ce dernier n'a qu'un but : devenir le parrain de la
+                famille Passione, la mafia qui sévit à Néapolis, et instaurer un code d'honneur dans ce groupe sans foi
+                ni loi ! Pourra-t-il s'imposer en chef incontesté ? </p>
+            </div>
+
+            <article class="flow">
+              <div class="row">
+                <div (click)="open(JOJO)" *ngFor="let JOJO of JOJO" class="team col-md-3">
+                  <ul class="auto-grid" role="list" *ngIf="JOJO.season == 4 ">
+                    <li>
+                      <div href="" class="profile">
+                        <h2 class="profile__name">Episode {{JOJO.episode}}</h2>
+                        <p>{{JOJO.title}}</p>
+                        <img alt="Thumbnail Episode 1 JOJO" [src]="JOJO.picture" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- Fin accordéon bootstrap + épisodes -->
+
+<app-footer></app-footer>

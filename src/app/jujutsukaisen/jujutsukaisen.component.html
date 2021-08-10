@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<!-- Titre  -->
+<div class="d-flex justify-content-center">
+  <h1>JUJUTSU KAISEN</h1>
+</div>
+<!-- Fin titre -->
+
+
+<!-- Image de l'animé -->
+<div class="d-flex justify-content-center">
+  <img src="../assets/imageMain/jujutsuKaisen.jpeg" alt="Jujutsu Kaisen" style="width:1200px">
+</div>
+<!-- Fin de l'image de l'animé -->
+
+<!-- Résumé -->
+<h2>Résumé</h2>
+<div class="d-flex justify-content-center">
+  <p class="col-lg-8">
+    Plus de 10 000 morts et disparus sont recensés chaque année au Japon. Les sentiments négatifs que relâchent les êtres humains sont en cause. Souffrance, regrets, humiliation : leur concentration dans un même endroit engendre des malédictions souvent mortelles... C'est ce que va découvrir Yuji Itadori, lycéen et membre du club d'occultisme. Il ne croit pas aux fantômes, mais il est doté d'une force physique hors norme qui représente un véritable atout pour les missions du groupe... jusqu'à ce que l'une d'elles prenne une mauvaise tournure. La relique qu'ils dénichent, le doigt découpé d'un démon millénaire, attire les monstres ! Sans réfléchir : le jeune homme avale la relique pour briser la malédiction ! Maintenant, il se trouve possédé par Ryômen Sukuna, le célèbre démon à deux visages. Cependant, contre toute attente, Yuji est toujours capable de garder le contrôle de son corps. Mais en dépit de cela, il est condamné à mort par l'organisation des exorcistes... Une décision qui ne pourra être repoussée qu'à une seule condition : trouver tous les doigts de Sukuna afin d'écarter la menace une bonne fois pour toutes !
+  </p>
+</div>
+<!-- Fin Résumé -->
+
+
+<!-- Vignettes épisodes -->
+<article class="flow">
+  <div class="row">
+    <div (click)="open(JUJUTSUKAISEN)" class="team col-md-3" *ngFor="let JUJUTSUKAISEN of JUJUTSUKAISEN">
+      <ul class="auto-grid" role="list">
+        <li>
+          <div href=""class="profile">
+            <h2 class="profile__name">Episode {{JUJUTSUKAISEN.episode}}</h2>
+            <p>{{JUJUTSUKAISEN.title}}</p>
+            <img alt="Thumbnail Episode 1 JUJUTSU KAISEN" [src]="JUJUTSUKAISEN.picture" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- Fin Vignettes épisodes -->
+
+<app-footer></app-footer>

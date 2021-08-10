@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shonenjump</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <!-- Script page Akira -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <app-root></app-root>
+
+<!-- script page Akira (désolé, j'ai pas pu faire autrement ^^) -->
+  <script>
+    setTimeout(() => {
+      var rellax = new Rellax('.rellax', {
+      speed: -2,
+      center: false,
+      round: true,
+      vertical: true,
+      horizontal: false
+    });
+}, 1500)
+  </script>
+<!-- Fin script page Akira -->
+
+<!-- Script formulaire (pas le choix encore une fois ^^ déso)-->
+<script type="text/javascript">
+  setTimeout(() => {
+    const login = document.getElementById('login');
+  const signup = document.getElementById('signup');
+
+  const showText = {
+      login: {
+          header: 'Tu n\'es pas encore membre?',
+          byline: 'Inscris-toi et découvre notre contenu !',
+          buttonText: 'Inscription'
+      },
+
+      signup: {
+          header: 'Tu es déjà membre?',
+          byline: 'Connecte toi pour découvrir ce que tu as manqué !',
+          buttonText: 'Connexion'
+      }
+  }
+  const switchButton = document.getElementById('switch-button');
+  const switchText = document.getElementById('switch-text');
+
+  switchButton.addEventListener('click', () => {
+      login.classList.toggle('hide-view');
+      signup.classList.toggle('hide-view');
+      login.classList.contains('hide-view') ? changeSwitchText('signup') : changeSwitchText('login')
+  })
+
+  function changeSwitchText(el) {
+      switchText.children[0].innerText = showText[el].header;
+      switchText.children[1].innerText = showText[el].byline;
+      switchButton.innerText = showText[el].buttonText;
+  }
+  }, 1500)
+
+</script>
+<!-- Fin script formulaire-->
+
+</body>
+
+</html>
